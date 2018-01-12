@@ -1,0 +1,72 @@
+{
+	"environment": {
+		"tc": {
+			"criteria": [600, "cycles"],
+			"temperature": [-45, 25, 85],
+			"humidity": [0, 50, 85],
+			"dwelltime": [60, 60],
+			"ramprate": [30, 30],
+			"testtype": "TC",
+			"production": true
+		},
+		"dh": {
+			"criteria": [1500, "hours"],
+			"temperature": [25, 25, 85],
+			"humidity": [0, 50, 85],
+			"dwelltime": [90000, 0],
+			"ramprate": [30, 30],
+			"testtype": "DH",
+			"production": true
+		},
+		"note": {
+			"criteria": "[value, 'unit']",
+			"temperature": "[min, nom, max]",
+			"humidity": "[min, nom, max]",
+			"dwelltime": "[dwell time at hot, dwell time at cold] in minutes",
+			"ramprate": "[ramp rate rising, ramp rate falling] in minutes",
+			"testtype": "TC/DH",
+			"production": "true/false"
+		},
+		"units": {
+			"temperature": "C",
+			"humidity": "RH",
+			"time": "minutes"
+		}
+	},
+	"ac": {
+		"ph1": {
+			"voltage": [0, 207, 230, 262],
+			"frequency": [0, 47, 50, 53],
+			"phase": 1,
+			"current": [0, 10, 10, 30],
+			"relay": [0, 1]
+		},
+		"ph2": {
+			"voltage": [0, 207, 230, 262],
+			"frequency": [0, 47, 50, 53],
+			"phase": 2,
+			"current": [0, 10, 10, 30],
+			"relay": [0, 1]
+		},
+		"ph3": {
+			"voltage": [0, 207, 230, 262],
+			"frequency": [0, 47, 50, 53],
+			"phase": 3,
+			"current": [0, 10, 10, 30],
+			"relay": [0, 1]
+		},
+		"note": {
+			"voltage": "[off, min, nom, max]",
+			"frequency": "[off, min, nom, max]",
+			"phase": "1/2/3 phase id",
+			"current": "[off, min, nom, max]",
+			"relay": "[0, 1] 0=open 1=close",
+			"reference": "(AS 61000.3.100) 230V 216-243 norm 207-262 worst 50Hz 47-53 norm 46-60 worst"
+		},
+		"units": {
+			"voltage": "V",
+			"frequency": "Hz",
+			"current": "A"
+		}
+	}
+}
